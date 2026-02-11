@@ -16,7 +16,7 @@
   };
 
   const validateEmail = (email) => {
-    return /^[^s@]+@[^s@]+.[^s@]+$/.test(email);
+    return /^[^s@]+@[^s@]+\.[^s@]+$/.test(email);
   };
 
   const validatePhone = (phone) => {
@@ -170,8 +170,8 @@
       const linkPath = link.getAttribute('href');
       if (!linkPath) return;
 
-      const normalizedLinkPath = linkPath.replace(//$/, '');
-      const normalizedCurrentPath = currentPath.replace(//$/, '');
+      const normalizedLinkPath = linkPath.replace(/\/$/, '');
+      const normalizedCurrentPath = currentPath.replace(/\/$/, '');
 
       if (
         normalizedLinkPath === normalizedCurrentPath ||
